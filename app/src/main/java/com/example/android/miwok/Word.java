@@ -15,7 +15,7 @@ public class Word {
 
     private Word(){}
 
-    public Word(String miwakTranslation, String defaultTranslation){
+    public Word(String defaultTranslation, String miwakTranslation){
         this.mMiwakTranslation = miwakTranslation;
         this.mDefaultTranslation = defaultTranslation;
     }
