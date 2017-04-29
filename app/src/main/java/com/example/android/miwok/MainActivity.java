@@ -19,6 +19,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,22 +29,33 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
-    }
 
-    public void openNumbersList(View view){
-        Intent intent = new Intent(this, NumbersActivity.class);
-        startActivity(intent);
-    }
-    public void openColorsList(View view){
-        Intent intent = new Intent(this, ColorsActivity.class);
-        startActivity(intent);
-    }
-    public void openFamilyList(View view){
-        Intent intent = new Intent(this, FamilyActivity.class);
-        startActivity(intent);
-    }
-    public void openPhrasesList(View view){
-        Intent intent = new Intent(this, PhrasesActivity.class);
-        startActivity(intent);
+        findViewById(R.id.numbers).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, NumbersActivity.class));
+            }
+        });
+
+        findViewById(R.id.colors).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ColorsActivity.class));
+            }
+        });
+
+        findViewById(R.id.family).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FamilyActivity.class));
+            }
+        });
+
+        findViewById(R.id.phrases).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, PhrasesActivity.class));
+            }
+        });
     }
 }
