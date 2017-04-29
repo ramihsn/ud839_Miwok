@@ -8,6 +8,6 @@ public class FamilyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_family2);
+        setContentView(R.layout.activity_family);
     }
 }
